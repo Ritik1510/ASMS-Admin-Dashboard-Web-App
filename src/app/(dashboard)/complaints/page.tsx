@@ -1,12 +1,10 @@
 import { PageHeader } from '@/components/shared/dashboard/tabPageHeader/tabPageHeader.component'
 import { tabPageHeaderConfig } from '@/components/shared/dashboard/tabPageHeader/tabPageHeader.config'
 
-function dashboard() {
+export default function Complaints() {
   return (
     <div>
-      <PageHeader config={tabPageHeaderConfig.overview} /> 
+      <PageHeader config={tabPageHeaderConfig.complaint} /> 
     </div>
   )
 }
-
-export default dashboard

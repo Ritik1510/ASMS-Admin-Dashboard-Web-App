@@ -1,12 +1,12 @@
 import { PageHeader } from '@/components/shared/dashboard/tabPageHeader/tabPageHeader.component'
 import { tabPageHeaderConfig } from '@/components/shared/dashboard/tabPageHeader/tabPageHeader.config'
 
-function dashboard() {
+function ApartmentsPage() {
   return (
     <div>
-      <PageHeader config={tabPageHeaderConfig.overview} /> 
+      <PageHeader config={tabPageHeaderConfig.apartment} /> 
     </div>
   )
 }
 
-export default dashboard
+export default ApartmentsPage
