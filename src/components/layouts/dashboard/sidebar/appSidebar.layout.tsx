@@ -79,10 +79,7 @@ export default async function AppSidebar() {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
-
-      <SidebarRail>
-
-      </SidebarRail>
+      <SidebarRail></SidebarRail>
     </Sidebar>
   )
 }

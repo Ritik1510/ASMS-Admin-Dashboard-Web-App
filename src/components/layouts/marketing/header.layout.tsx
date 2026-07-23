@@ -2,10 +2,7 @@
 import MarketingHeaderNavigation from '@/components/navigation/marketing/navigation/marketing.navigation'
 import { MARKETING_ROUTES } from '@/components/navigation/dashboard/routes/marketing/marketing.routes'
 import { buttonVariants } from '@/components/ui/button'
-import {
-  Show,
-  UserButton
-} from '@clerk/nextjs'
+import { Show, UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 
 function MarketingHeader() {
@@ -35,9 +32,6 @@ function MarketingHeader() {
           </Link>
         </Show>
         <Show when="signed-in">
-          <UserButton />
-        </Show>
-        <Show when="signed-in">
           <Link
             href={MARKETING_ROUTES.PRODUCT.DASHBOARD}
             target='_blank'
@@ -46,6 +40,9 @@ function MarketingHeader() {
           >
             dashboard
           </Link>
+        </Show>
+        <Show when="signed-in">
+          <UserButton />
         </Show>
       </div>
     </header>
