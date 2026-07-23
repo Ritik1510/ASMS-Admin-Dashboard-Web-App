@@ -1,4 +1,4 @@
-import { User } from "lucide-react";
+import { DoorOpen, Flag, Home, NotebookPen, Paperclip, User } from "lucide-react";
 
 export const tabPageHeaderConfig = {
   overview: {
@@ -38,42 +38,52 @@ export const tabPageHeaderConfig = {
     ]
   },
   apartment: {
-    title: "Users",
-    des: "",
+    title: "Apartments",
+    des: "Manage all your apartments and activities",
     tags: [
       {
-        icon: User,
-        label: "",
+        icon: Home,
+        label: "apartments",
       }
     ]
   },
   complaint: {
-    title: "Users",
-    des: "",
+    title: "Complaints",
+    des: "Manage resident's complaints and update status, ",
     tags: [
       {
-        icon: User,
-        label: "",
+        icon: Paperclip,
+        label: "Complaints",
       }
     ]
   },
   notice: {
-    title: "Users",
-    des: "",
+    title: "Notices",
+    des: "Populate your notice to the all user of your society",
     tags: [
       {
-        icon: User,
-        label: "",
+        icon: Flag,
+        label: "notices",
       }
     ]
   },
   invitation: {
-    title: "Users",
-    des: "",
+    title: "Invitations",
+    des: "Invite new users, see status of invitaion process",
     tags: [
       {
-        icon: User,
-        label: "",
+        icon: NotebookPen,
+        label: "Invite",
+      }
+    ]
+  },
+  visitors: {
+    title: "Visitors",
+    des: "See all incoming entries, visiting status",
+    tags: [
+      {
+        icon: DoorOpen,
+        label: "Visitor",
       }
     ]
   },
