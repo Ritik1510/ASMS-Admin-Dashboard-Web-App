@@ -5,8 +5,8 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-const surfaceVariants = cva(
-  "rounded-lg border bg-card text-card-foreground transition-colors",
+const sectionVariants = cva(
+  "w-full",
   {
     variants: {
       shadow: {
@@ -21,38 +21,33 @@ const surfaceVariants = cva(
         md: "p-4",
         lg: "p-6",
       },
-      radius: {
-        sm: "rounded-md",
-        md: "rounded-lg",
-        lg: "rounded-xl",
-        xl: "rounded-2xl",
-      },
+      background: {
+        none: "",
+        brand: ""
+      }
     },
     defaultVariants: {
       shadow: "sm",
       padding: "sm",
-      radius: "md",
     },
   }
 );
 
-type SurfaceProps = React.HTMLAttributes<HTMLDivElement> &
-  VariantProps<typeof surfaceVariants>;
+type SectionProps = React.HTMLAttributes<HTMLDivElement> &
+  VariantProps<typeof sectionVariants>;
 
 export function Surface({
   className,
   shadow,
   padding,
-  radius,
   ...props
-}: SurfaceProps) {
+}: SectionProps) {
   return (
     <div
       className={cn(
-        surfaceVariants({
+        sectionVariants({
           shadow,
           padding,
-          radius,
         }),
         className
       )}
