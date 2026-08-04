@@ -1,12 +1,12 @@
-import MarketingFooter from '@/components/shared/marketing/footer'
-import MarketingHeader from '@/components/shared/marketing/header'
+import MarketingFooter from '@/components/layouts/marketing/footer.layout'
+import MarketingHeader from '@/components/layouts/marketing/header.layout'
 import React from 'react'
 
 export default function MarketingLayout({ children }: Readonly<{children: React.ReactNode }>) {
   return (
-    <div className='grid'>
+    <div className='font-marketing grid'>
       <MarketingHeader />
-      <main className='h-screen w-screen'>{children}</main>
+      <main className='grid'>{children}</main>
       <MarketingFooter />
     </div>
   )

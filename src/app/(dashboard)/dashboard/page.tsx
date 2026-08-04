@@ -1,8 +1,11 @@
-import React from 'react'
+import { PageHeader } from '@/components/shared/dashboard/tabPageHeader/tabPageHeader.component'
+import { tabPageHeaderConfig } from '@/components/shared/dashboard/tabPageHeader/tabPageHeader.config'
 
 function dashboard() {
   return (
-    <div>dashboard</div>
+    <div>
+      <PageHeader config={tabPageHeaderConfig.overview} /> 
+    </div>
   )
 }
 

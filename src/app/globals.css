@@ -46,11 +46,42 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  --font-marketing: var(--font-marketing), serif;
+  --font-product: var(--font-product), monospace;
+
+  /* text */
+  --color-text-page: var(--text-page);
+  --color-text-section: var(--text-section);
+  --color-text-heading: var(--text-heading);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-text-disabled: var(--text-disabled);
+
+  --color-text-success: var(--text-success);
+  --color-text-warning: var(--text-warning);
+  --color-text-info: var(--text-info);
+  --color-text-destructive: var(--text-destructive);
+
+  /* Border */
+  --color-border-success: var(--border-success);
+  --color-border-warning: var(--border-warning);
+  --color-border-info: var(--border-info);
+  --color-border-destructive: var(--border-destructive);
+
+  /* Icon */
+  --color-icon-success: var(--icon-success);
+  --color-icon-warning: var(--icon-warning);
+  --color-icon-info: var(--icon-info);
+  --color-icon-destructive: var(--icon-destructive);
 }
 
 :root {
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: var(--text-body);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -81,6 +112,54 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* =================== main ========================== */
+  /* Brand Palette */
+  --c-brand-900: oklch(0.289 0.0395 68.68);
+  --c-brand-800: oklch(0.360 0.044 69.8);
+  --c-brand-700: oklch(0.407 0.044 66.1);
+  --c-brand-600: oklch(0.458 0.041 63.7);
+  --c-brand-500: oklch(0.580 0.033 67.1);
+  --c-brand-400: oklch(0.680 0.028 63.5);
+  --c-brand-300: oklch(0.799 0.018 61.9);
+  
+  --color-action-primary: oklch(69.94% 0.15271 61.99); /* Features & Walk-throughs */
+  --color-accent-badge: oklch(55.05% 0.1617 298.16); /* Offers & Badges */
+
+  /* Status Colors */
+  --c-success: oklch(0.527 0.137 150.1);
+  --c-warning: oklch(0.555 0.146 49.0);
+  --c-info: oklch(0.546 0.215 262.9);
+  --c-destructive: oklch(0.577 0.215 27.3);
+  /* ==================================================== */
+
+  /* text */
+  --text-display: var(--c-brand-900); /* Highest emphasis */
+  --text-title: var(--c-brand-800); /* Section titles */
+  --text-heading: var(--c-brand-700); /* Card titles / dialog titles */
+
+  --text-primary: var(--c-brand-600); /* Primary readable content */
+  --text-secondary: var(--c-brand-500); /* Descriptions / helper text */
+  --text-tertiary: var(--c-brand-400); /* Metadata / timestamps */
+
+  --text-disabled: var(--c-brand-300); /* Disabled */
+
+  --text-success: var(--c-success);
+  --text-warning: var(--c-warning);
+  --text-info: var(--c-info);
+  --text-destructive: var(--c-destructive);
+
+  /* border */
+  --border-success: var(--c-success);
+  --border-warning: var(--c-warning);
+  --border-info: var(--c-info);
+  --border-destructive: var(--c-destructive);
+
+  /* icon */
+  --icon-success: var(--c-success);
+  --icon-warning: var(--c-warning);
+  --icon-info: var(--c-info);
+  --icon-destructive: var(--c-destructive);
 }
 
 .dark {
@@ -115,16 +194,54 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* =================== main ========================== */
+  --c-brand-900: oklch(0.933 0.027 69.3);  
+  --c-brand-800: oklch(0.888 0.031 69.0);
+  --c-brand-700: oklch(0.831 0.036 68.7);
+  --c-brand-600: oklch(0.777 0.040 67.2);
+  --c-brand-500: oklch(0.691 0.042 65.8);
+  --c-brand-400: oklch(0.597 0.042 61.7);
+  --c-brand-300: oklch(0.480 0.033 65.2);
+
+  --c-success: oklch(0.800 0.182 151.7);
+  --c-warning: oklch(0.837 0.164 84.4);
+  --c-info: oklch(0.714 0.143 254.6);
+  --c-destructive: oklch(0.711 0.166 22.2);
+  /* ==================================================== */
+
+  --text-display: var(--c-brand-900);
+  --text-title: var(--c-brand-800);
+  --text-heading: var(--c-brand-700);
+
+  --text-primary: var(--c-brand-600);
+  --text-secondary: var(--c-brand-500);
+  --text-tertiary: var(--c-brand-400);
+
+  --text-disabled: var(--c-brand-300);
+
+  --text-success: var(--c-success);
+  --text-warning: var(--c-warning);
+  --text-info: var(--c-info);
+  --text-destructive: var(--c-destructive);
+
+  --border-success: var(--c-success);
+  --border-warning: var(--c-warning);
+  --border-info: var(--c-info);
+  --border-destructive: var(--c-destructive);
+
+  --icon-success: var(--c-success);
+  --icon-warning: var(--c-warning);
+  --icon-info: var(--c-info);
+  --icon-destructive: var(--c-destructive);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
   }
 }

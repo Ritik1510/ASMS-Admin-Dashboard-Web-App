@@ -1,9 +1,9 @@
 import React from 'react'
 
-function marketingContact() {
+function MarketingContact() {
   return (
-    <div>marketingContact</div>
+    <div>MarketingContact</div>
   )
 }
 
-export default marketingContact
+export default MarketingContact

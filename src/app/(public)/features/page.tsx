@@ -1,9 +1,9 @@
 import React from 'react'
 
-function marketingFeatures() {
+function MarketingFeatures() {
   return (
-    <div>marketingFeatures</div>
+    <div>MarketingFeatures</div>
   )
 }
 
-export default marketingFeatures
+export default MarketingFeatures
