@@ -5,10 +5,11 @@ import MarketingPricing from './pricing/page'
 import MarketingFeatures from './features/page'
 import MarketingContact from './contact/page'
 import { Show } from '@clerk/nextjs'
+import { ScrollToTop } from '@/components/ui/scrollToTop'
 
 export default function PublicHomePage() {
   return (
-    <div>
+    <div className='relative'>
       <section className='flex min-h-[calc(100vh-8rem)] items-center justify-center bg-gradient-to-br from-violet-50 via-white to-zinc-100 px-6 py-16'>
         <div className='max-w-3xl text-center'>
           <p className='mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-violet-600'>ASMS Admin Panel</p>
@@ -22,7 +23,7 @@ export default function PublicHomePage() {
           </Show>
           <Show when="signed-in">
             <div className='mt-10 flex flex-wrap justify-center gap-4'>
-              <Link href={MARKETING_ROUTES.PRODUCT.DASHBOARD} className='rounded-full px-6 py-3 text-sm font-medium transition hover:border-[0.654px] hover:border-foreground'>Dashboard</Link>
+              <Link target='_blank' href={MARKETING_ROUTES.PRODUCT.DASHBOARD} className='rounded-full px-6 py-3 text-sm font-medium transition hover:border-[0.654px] hover:border-foreground'>Dashboard</Link>
             </div>
           </Show>
         </div>
@@ -39,6 +40,9 @@ export default function PublicHomePage() {
       <section id={MARKETING_ROUTES.CONTACT.ANCHOR} className='h-[85vh] w-screen'>
         <MarketingContact />
       </section>
+      <div>
+        <ScrollToTop />
+      </div>
     </div>
   )
 }
