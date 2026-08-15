@@ -28,7 +28,7 @@ function MarketingHeader() {
   return (
     <header
       className={`
-        sticky top-2 z-20 mx-1.5 h-16
+        sticky top-2 z-20 mx-1.5 min-h-16
         flex items-center justify-end flex-wrap
         px-2 gap-3
         transition-all duration-300 ease-out
