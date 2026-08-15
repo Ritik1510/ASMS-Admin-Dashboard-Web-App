@@ -2,10 +2,7 @@
 import { FeatureDevelopmentCard } from "@/components/Development-and-Maintenance/featureDevelopmentCard.component"
 import { PageHeader } from "@/components/shared/dashboard/tabPageHeader/tabPageHeader.component"
 import { tabPageHeaderConfig } from "@/components/shared/dashboard/tabPageHeader/tabPageHeader.config"
-import { buttonVariants } from "@/components/ui/button"
-import { getComplaints } from "@/dal/complaints/query.dal"
-import { getUsers } from "@/dal/users/query.dal"
-import { useAuth } from "@clerk/nextjs"
+// import { useAuth } from "@clerk/nextjs"
 
 interface User {
   id: number;
@@ -15,25 +12,32 @@ interface User {
 }
 
 function Users() {
-  const { getToken } = useAuth()
 
+  /*
+  const { getToken } = useAuth()
   const handleFetchUsers = async () => {
      const token = await getToken()
       const users = await getUsers(token)
       const complaints = await getComplaints(token)
   };
+  */
 
-  
   return (
     <>
       {/* header */}
       <PageHeader config={tabPageHeaderConfig.user} />
 
-      {/* test button for fetching users/user */}
-      {/* <button onClick={handleFetchUsers} className={buttonVariants({ variant: "outline", size: "default" })}>
+      {/* test button for fetching users/user and for the token_provider tests */}
+      {/* <button
+        onClick={handleFetchUsers}
+        className={buttonVariants({ variant: "outline", size: "default" })}
+      >
         Fetch Results
       </button>
-      <button onClick={handleFetchUsers} className={buttonVariants({ variant: "outline", size: "default" })}>
+      <button
+        onClick={handleFetchUsers}
+        className={buttonVariants({ variant: "outline", size: "default" })}
+      >
         Fetch Complaints
       </button> */}
 
