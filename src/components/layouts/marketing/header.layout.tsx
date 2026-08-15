@@ -28,9 +28,9 @@ function MarketingHeader() {
   return (
     <header
       className={`
-        sticky top-2 z-20 mx-1.5
-        flex h-16 items-center justify-end
-        gap-4 px-2
+        sticky top-2 z-20 mx-1.5 h-16
+        flex items-center justify-end flex-wrap
+        px-2 gap-3
         transition-all duration-300 ease-out
 
         rounded-lg
@@ -44,7 +44,7 @@ function MarketingHeader() {
         }
       `}
     >
-      <div className="absolute left-2 top-0 h-full w-15 md:left-3 lg:left-4">
+      <div className="absolute left-2 top-0 h-full w-15 md:left-3 lg:left-4 ml-auto">
         <Link
           href="/"
           className="absolute left-0 top-0 h-full w-full"
@@ -60,8 +60,10 @@ function MarketingHeader() {
         </Link>
       </div>
 
+        <div className="marketing-header-navigation-container order-last basis-full lg:order-0 lg:basis-auto">
+          <MarketingHeaderNavigation />
+        </div>
       <div className="flex items-center justify-center gap-1.5 sm:gap-2 md:gap-2.5">
-        <MarketingHeaderNavigation />
 
         <div className="auth-btn-container flex items-center justify-center gap-1.5 sm:gap-2 md:gap-2.5">
           <Show when="signed-out">
