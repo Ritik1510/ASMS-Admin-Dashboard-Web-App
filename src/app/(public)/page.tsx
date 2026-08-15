@@ -1,48 +1,93 @@
 import Link from 'next/link'
 import { MARKETING_ROUTES } from '@/components/navigation/dashboard/routes/marketing/marketing.routes'
-import MarketingAbout from './about/page'
-import MarketingPricing from './pricing/page'
+import MarketingWhyAsms from './about/page'
+import MarketingHowItWorks from './how-it-works/page'
 import MarketingFeatures from './features/page'
-import MarketingContact from './contact/page'
+import MarketingForEveryone from './marketing-for-everyone/page'
+import MarketingPricing from './pricing/page'
+import MarketingEarlyAccess from './early-access/page'
 import { Show } from '@clerk/nextjs'
-import { ScrollToTop } from '@/components/ui/scrollToTop'
 
 export default function PublicHomePage() {
   return (
     <div className='relative'>
-      <section className='flex min-h-[calc(100vh-8rem)] items-center justify-center bg-gradient-to-br from-violet-50 via-white to-zinc-100 px-6 py-16'>
-        <div className='max-w-3xl text-center'>
-          <p className='mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-violet-600'>ASMS Admin Panel</p>
-          <h1 className='text-4xl font-semibold tracking-tight sm:text-6xl'>Apartments And Socity Management System</h1>
-          <p className='mx-auto mt-6 max-w-2xl text-lg'>Manage your apartments and society with ease using our comprehensive management system.</p>
+      {/* Hero Section */}
+      <section className="flex min-h-[calc(100vh-8rem)] items-center justify-center bg-linear-to-br from-violet-50 via-white to-zinc-100 px-6 py-16">
+        <div className="max-w-3xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em]" style={{color: 'var(--c-brand-500)'}}>
+            Apartment & Society Management System
+          </p>
+
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
+            Manage your society from one connected system.
+          </h1>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+            ASMS gives admins, residents, and guards a shared platform to
+            manage the everyday operations of a residential society.
+          </p>
+
           <Show when="signed-out">
-            <div className='mt-10 flex flex-wrap justify-center gap-4'>
-              <Link href={MARKETING_ROUTES.AUTH.SIGN_IN} className='rounded-full px-6 py-3 text-sm font-medium transition hover:border-[0.654px] hover:border-foreground'>Sign in</Link>
-              <Link href={MARKETING_ROUTES.AUTH.SIGN_UP} className='rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition hover:border-zinc-400 hover:bg-white'>Create account</Link>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Link
+                href={MARKETING_ROUTES.AUTH.SIGN_IN}
+                className="rounded-full px-6 py-3 text-sm font-medium transition hover:border-[0.654px] hover:border-foreground"
+              >
+                Sign in
+              </Link>
+
+              <Link
+                href={MARKETING_ROUTES.AUTH.SIGN_UP}
+                className="rounded-full border border-border px-6 py-3 text-sm font-medium transition hover:border-zinc-400 hover:bg-white"
+              >
+                Create account
+              </Link>
             </div>
           </Show>
+
           <Show when="signed-in">
-            <div className='mt-10 flex flex-wrap justify-center gap-4'>
-              <Link target='_blank' href={MARKETING_ROUTES.PRODUCT.DASHBOARD} className='rounded-full px-6 py-3 text-sm font-medium transition hover:border-[0.654px] hover:border-foreground'>Dashboard</Link>
+            <div className="mt-10 flex justify-center">
+              <Link
+                target="_blank"
+                href={MARKETING_ROUTES.PRODUCT.DASHBOARD}
+                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition hover:border-zinc-400 hover:bg-brand-300"
+              >
+                Dashboard
+              </Link>
             </div>
           </Show>
         </div>
       </section>
-      <section id={MARKETING_ROUTES.ABOUT.ANCHOR} className='h-[85vh] w-screen'>
-        <MarketingAbout />
+
+      {/* Why ASMS Section */}
+      <section id={MARKETING_ROUTES.SECTIONS.WHY_ASMS}>
+        <MarketingWhyAsms />
       </section>
-      <section id={MARKETING_ROUTES.PRICING.ANCHOR} className='h-[85vh] w-screen'>
-        <MarketingPricing />
+
+      {/* How It Works Section */}
+      <section id={MARKETING_ROUTES.SECTIONS.HOW_IT_WORKS}>
+        <MarketingHowItWorks />
       </section>
-      <section id={MARKETING_ROUTES.FEATURES.ANCHOR} className='h-[85vh] w-screen'>
+
+      {/* Features Section */}
+      <section id={MARKETING_ROUTES.SECTIONS.FEATURES}>
         <MarketingFeatures />
       </section>
-      <section id={MARKETING_ROUTES.CONTACT.ANCHOR} className='h-[85vh] w-screen'>
-        <MarketingContact />
+
+      {/* For Everyone Section */}
+      <section id={MARKETING_ROUTES.SECTIONS.FOR_EVERYONE}>
+        <MarketingForEveryone />
       </section>
-      <div>
-        <ScrollToTop />
-      </div>
+
+      {/* Pricing Section */}
+      <section id={MARKETING_ROUTES.SECTIONS.PRICING}>
+        <MarketingPricing />
+      </section>
+
+      {/* Early Access Section */}
+      <section id={MARKETING_ROUTES.SECTIONS.EARLY_ACCESS}>
+        <MarketingEarlyAccess />
+      </section>
     </div>
   )
 }
