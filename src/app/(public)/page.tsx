@@ -31,14 +31,14 @@ export default function PublicHomePage() {
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link
                 href={MARKETING_ROUTES.AUTH.SIGN_IN}
-                className="rounded-full px-6 py-3 text-sm font-medium transition hover:border-[0.654px] hover:border-foreground"
+                className="rounded-full px-6 py-3 text-sm font-medium transition hover:border-[0.654px] hover:border-foreground inline-flex items-center gap-2 border-border hover:bg-brand-300"
               >
                 Sign in
               </Link>
 
               <Link
                 href={MARKETING_ROUTES.AUTH.SIGN_UP}
-                className="rounded-full border border-border px-6 py-3 text-sm font-medium transition hover:border-zinc-400 hover:bg-white"
+                className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium transition hover:border-zinc-400 hover:bg-brand-300"
               >
                 Create account
               </Link>
