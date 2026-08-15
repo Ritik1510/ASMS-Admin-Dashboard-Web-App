@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
-import { Cinzel, JetBrains_Mono } from 'next/font/google'
+import { Cinzel, Elms_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
 // marketing
-const marketing_font = Cinzel({
+const marketing_font = Elms_Sans({
   variable: '--font-marketing',
   subsets: ['latin'],
 })
