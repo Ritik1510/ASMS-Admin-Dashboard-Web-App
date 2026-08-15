@@ -8,7 +8,7 @@ function MarketingHeaderNavigation() {
         <Link 
         key={item.id}
         href={item.href || '#' }
-        className=""
+        className="text-[10px] min-[400px]:text-[11px] sm:text-xs md:text-sm"
         >
           {item.label}
         </Link>
