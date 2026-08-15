@@ -3,35 +3,15 @@ export const MARKETING_ROUTES = {
     ROOT: "/",
   },
 
-  // In-page anchor IDs (single-page scroll on homepage)
+  // Single-page marketing sections
   // Use as: href={`#${MARKETING_ROUTES.SECTIONS.FEATURES}`} or id={MARKETING_ROUTES.SECTIONS.FEATURES}
   SECTIONS: {
-    PRODUCTS: "products",
+    WHY_ASMS: "why-asms",
+    HOW_IT_WORKS: "how-it-works",
     FEATURES: "features",
+    FOR_EVERYONE: "for-everyone",
     PRICING: "pricing",
-    FAQ: "faq",
-    ABOUT: "about",
-    CONTACT: "contact",
-  },
-
-  ABOUT: {
-    PAGE: "/about",
-    ANCHOR: "about",
-  },
-
-  FEATURES: {
-    PAGE: "/features",
-    ANCHOR: "features",
-  },
-
-  PRICING: {
-    PAGE: "/pricing",
-    ANCHOR: "pricing",
-  },
-
-  CONTACT: {
-    PAGE: "/contact",
-    ANCHOR: "contact",
+    EARLY_ACCESS: "early-access",
   },
 
   AUTH: {
