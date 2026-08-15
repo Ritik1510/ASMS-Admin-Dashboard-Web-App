@@ -1,4 +1,6 @@
-import { clerkServerTokenProvider } from "@/network/auth/accessTokenProvider/server/server.client";
+// These are just for testing the token_retrivel/token_provider layer test purposes, not intented to use in production, that why they are commented out. The code is still here for reference and testing purposes.
+
+/*import { clerkServerTokenProvider } from "@/network/auth/accessTokenProvider/server/server.client";
 import { request } from "@/network/http/client";
 import { useAuth } from "@clerk/nextjs"; // client hook for token extraction
 import { auth } from "@clerk/nextjs/server"; // server-side auth for token extraction
@@ -27,4 +29,4 @@ export async function getUsers(token: string | null) {
       limit: 5
     }
   })
-}
+}*/
