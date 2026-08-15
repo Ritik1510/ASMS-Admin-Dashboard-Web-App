@@ -39,6 +39,9 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-brand: var(--brand);
+  --color-brand-light: var(--brand-light);
+  --color-brand-dark: var(--brand-dark);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -49,6 +52,15 @@
 
   --font-marketing: var(--font-marketing), serif;
   --font-product: var(--font-product), monospace;
+
+  /* brand */
+  --color-brand-900: var(--c-brand-900);
+  --color-brand-800: var(--c-brand-800);
+  --color-brand-700: var(--c-brand-700);
+  --color-brand-600: var(--c-brand-600);
+  --color-brand-500: var(--c-brand-500);
+  --color-brand-400: var(--c-brand-400);
+  --color-brand-300: var(--c-brand-300);
 
   /* text */
   --color-text-page: var(--text-page);
@@ -122,6 +134,11 @@
   --c-brand-500: oklch(0.580 0.033 67.1);
   --c-brand-400: oklch(0.680 0.028 63.5);
   --c-brand-300: oklch(0.799 0.018 61.9);
+  
+  /* Brand utility colors */
+  --brand: var(--c-brand-500);
+  --brand-light: var(--c-brand-300);
+  --brand-dark: var(--c-brand-700);
   
   --color-action-primary: oklch(69.94% 0.15271 61.99); /* Features & Walk-throughs */
   --color-accent-badge: oklch(55.05% 0.1617 298.16); /* Offers & Badges */
@@ -203,6 +220,11 @@
   --c-brand-500: oklch(0.691 0.042 65.8);
   --c-brand-400: oklch(0.597 0.042 61.7);
   --c-brand-300: oklch(0.480 0.033 65.2);
+
+  /* Brand utility colors */
+  --brand: var(--c-brand-500);
+  --brand-light: var(--c-brand-300);
+  --brand-dark: var(--c-brand-700);
 
   --c-success: oklch(0.800 0.182 151.7);
   --c-warning: oklch(0.837 0.164 84.4);
