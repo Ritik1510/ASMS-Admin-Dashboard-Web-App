@@ -1,35 +1,48 @@
+'use client'
+import { FeatureDevelopmentCard } from "@/components/Development-and-Maintenance/featureDevelopmentCard.component"
 import { PageHeader } from "@/components/shared/dashboard/tabPageHeader/tabPageHeader.component"
 import { tabPageHeaderConfig } from "@/components/shared/dashboard/tabPageHeader/tabPageHeader.config"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
+import { getComplaints } from "@/dal/complaints/query.dal"
+import { getUsers } from "@/dal/users/query.dal"
 import { useAuth } from "@clerk/nextjs"
 
-function users() {
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  role: string;
+}
+
+function Users() {
+  const { getToken } = useAuth()
+
+  const handleFetchUsers = async () => {
+     const token = await getToken()
+      const users = await getUsers(token)
+      const complaints = await getComplaints(token)
+  };
+
+  
   return (
     <>
       {/* header */}
-      <PageHeader config={tabPageHeaderConfig.user} /> 
-      <Button 
-        className={buttonVariants({variant: 'outline', size: 'default'})}
-        onClick={getUsers}
-        > 
-        getUsers
-      </Button>
+      <PageHeader config={tabPageHeaderConfig.user} />
+
+      {/* test button for fetching users/user */}
+      {/* <button onClick={handleFetchUsers} className={buttonVariants({ variant: "outline", size: "default" })}>
+        Fetch Results
+      </button>
+      <button onClick={handleFetchUsers} className={buttonVariants({ variant: "outline", size: "default" })}>
+        Fetch Complaints
+      </button> */}
+
       {/* invitation +  overview_card */}
       {/* user tabel */}
+      <FeatureDevelopmentCard title="Users" />
     </>
   )
 }
 
-export const getUsers = async ()=> {
-  const { getToken } = useAuth();
-  const token = await getToken();
-  const res = await fetch("/api/v1/users", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    }
-  });
-  const data = await res.json();
-  console.log(data);
-}
+export default Users
 
-export default users
