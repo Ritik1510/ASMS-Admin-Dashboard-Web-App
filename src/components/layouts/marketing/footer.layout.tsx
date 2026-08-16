@@ -56,7 +56,7 @@ function MarketingFooter() {
         <div className="border-t border-border">
           <div className="flex flex-col gap-4 px-6 py-6 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-10">
             <p className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} thinkWithLimits.com All rights reserved.
+              © {new Date().getFullYear()} thinkWithoutLimits.com All rights reserved.
             </p>
 
             <div className="flex items-center gap-5">
