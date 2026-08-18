@@ -8,7 +8,7 @@ function MarketingHeaderNavigation() {
         <Link 
         key={item.id}
         href={item.href || '#' }
-        className="text-[10px] min-[400px]:text-[11px] sm:text-xs md:text-sm underline sm:underline-offset-2 md:underline-offset-4 tracking-tight"
+        className="text-lg underline sm:underline-offset-2 md:underline-offset-4 tracking-tight hover:text-brand-600"
         >
           {item.label}
         </Link>
