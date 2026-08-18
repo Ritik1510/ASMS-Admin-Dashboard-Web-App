@@ -30,11 +30,11 @@ function MarketingHeader() {
       className={`
         sticky top-2 z-20 mx-1.5 min-h-16
         grid
-        px-2 rounded-lg
+        rounded-lg
 
-        transition-all duration-300 ease-out
+        transition-all duration-400 ease-out
 
-        md:p-2 lg:p-3
+        px-2 lg:p-3
         
         ${isScrolled
           ? "border-b border-black/5 bg-brand-300/70 shadow-sm backdrop-blur-sm backdrop-saturate-150 dark:border-white/10 dark:bg-black/50"
@@ -68,7 +68,7 @@ function MarketingHeader() {
                 className={buttonVariants({
                   variant: "outline",
                   size: "default",
-                }) + " text-[11px] sm:text-xs md:text-sm lg:text-sm hover:border-brand-900"}
+                }) + "text-lg hover:border-brand-900"}
                 replace
               >
                 Sign-In
@@ -79,7 +79,7 @@ function MarketingHeader() {
                 className={buttonVariants({
                   variant: "outline",
                   size: "default",
-                }) + " text-[11px] sm:text-xs md:text-sm lg:text-sm hover:border-brand-900"}
+                }) + "text-lg hover:border-brand-900"}
                 replace
               >
                 Sign-Up
@@ -93,7 +93,7 @@ function MarketingHeader() {
                 className={buttonVariants({
                   variant: "outline",
                   size: "default",
-                }) + "text-[11px] sm:text-xs md:text-sm lg:text-sm hover:border-brand-900"}
+                }) + "text-lg hover:border-brand-900"}
                 replace
               >
                 Dashboard
