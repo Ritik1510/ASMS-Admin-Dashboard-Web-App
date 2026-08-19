@@ -1,18 +1,19 @@
 import {
   Building2,
-  Building2Icon,
-  FileStack,
-  Flag,
-  Home,
-  ListTodo,
+  FileWarning,
+  IdCard,
+  LayoutDashboard,
+  Megaphone,
   Rows2,
   UsersRound
 } from "lucide-react";
+
 import { SidebarGroupConfig, SidebarHeaderConfig } from "../types/dashboardNavigation.type";
+import { Logo } from "@/components/ui/customs/project-logo-provider";
 
 export const getDashboardSidebarHeaderConfig = (username: string): SidebarHeaderConfig => ({
   id: "header",
-  icon: Building2Icon, // <--- icon of this project
+  icon: Logo, // <--- icon of this project
   label: "AxSMS",
   username: username, // Dynamic value
   href: "#",
@@ -21,7 +22,7 @@ export const getDashboardSidebarHeaderConfig = (username: string): SidebarHeader
 export const dashboardSidebar_groupConfig: SidebarGroupConfig[] = [
   {
     id: "overview",
-    icon: Building2,
+    icon: LayoutDashboard,
     label: "Overview",
     href: "/overview"
   },
@@ -48,24 +49,24 @@ export const dashboardSidebar_groupConfig: SidebarGroupConfig[] = [
   {
     id: "apartments",
     label: "Apartments",
-    icon: ListTodo,
+    icon: Building2,
     href: "/apartments"
   },
   {
     id: "complaints",
     label: "Complaints",
-    icon: ListTodo,
+    icon: FileWarning,
     href: "/complaints"
   },
   {
     id: "notices",
-    icon: Flag,
+    icon: Megaphone,
     label: "Notices",
     href: "/notices"
   },
   {
     id: "visitors",
-    icon: FileStack,
+    icon: IdCard,
     label: "Visitors",
     href: "/visitors"
   },

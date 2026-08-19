@@ -1,4 +1,4 @@
-import { DoorOpen, Flag, Home, NotebookPen, Paperclip, User } from "lucide-react";
+import { Building2, DoorOpen, FileWarning, Flag, Home, Megaphone, Network, NotebookPen, Paperclip, User, Users } from "lucide-react";
 
 export const tabPageHeaderConfig = {
   overview: {
@@ -6,23 +6,23 @@ export const tabPageHeaderConfig = {
     des: "Glances of all modules",
     tags: [ // <-- TODO: for tags, for this consider building badge lib for the system
       {
-        icon: User,
+        icon: Users,
         label: "User",
       },
       {
-        icon: User,
+        icon: Building2,
         label: "Apartments",
       },
       {
-        icon: User,
+        icon: Network,
         label: "Society",
       },
       {
-        icon: User,
+        icon: FileWarning,
         label: "Complaints",
       },
       {
-        icon: User,
+        icon: Megaphone,
         label: "Notices",
       },
     ]
