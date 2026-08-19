@@ -6,7 +6,7 @@ function howItWorks() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.25em]" style={{color: 'var(--c-brand-500)'}}>
-            How ASMS works
+            How Gate-G works
           </p>
 
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-5xl">
@@ -14,7 +14,7 @@ function howItWorks() {
           </h2>
 
           <p className="mt-6 text-base leading-7 text-muted-foreground sm:text-lg">
-            ASMS connects the people responsible for running the society with
+            Gate-G connects the people responsible for running the society with
             the people who live in it.
           </p>
         </div>

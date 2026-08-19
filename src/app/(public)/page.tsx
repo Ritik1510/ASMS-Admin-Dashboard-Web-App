@@ -14,8 +14,8 @@ export default function PublicHomePage() {
       {/* Hero Section */}
       <section className="flex min-h-[calc(100vh-8rem)] items-center justify-center bg-linear-to-br from-violet-50 via-white to-zinc-100 px-6 py-16">
         <div className="max-w-3xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em]" style={{color: 'var(--c-brand-500)'}}>
-            Apartment & Society Management System
+          <p className="mb-4 text-lg font-semibold uppercase tracking-[0.3em] text-brand-600">
+            Gate-G
           </p>
 
           <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
@@ -23,7 +23,7 @@ export default function PublicHomePage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            ASMS gives admins, residents, and guards a shared platform to
+            Gate-G gives admins, residents, and guards a shared platform to
             manage the everyday operations of a residential society.
           </p>
 
@@ -59,8 +59,8 @@ export default function PublicHomePage() {
         </div>
       </section>
 
-      {/* Why ASMS Section */}
-      <section id={MARKETING_ROUTES.SECTIONS.WHY_ASMS}>
+      {/* Why GATE-G Section */}
+      <section id={MARKETING_ROUTES.SECTIONS.WHY_GATE_G}>
         <MarketingWhyAsms />
       </section>
 

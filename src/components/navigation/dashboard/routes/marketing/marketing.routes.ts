@@ -6,7 +6,7 @@ export const MARKETING_ROUTES = {
   // Single-page marketing sections
   // Use as: href={`#${MARKETING_ROUTES.SECTIONS.FEATURES}`} or id={MARKETING_ROUTES.SECTIONS.FEATURES}
   SECTIONS: {
-    WHY_ASMS: "why-asms",
+    WHY_GATE_G: "why-gate-g",
     HOW_IT_WORKS: "how-it-works",
     FEATURES: "features",
     FOR_EVERYONE: "for-everyone",

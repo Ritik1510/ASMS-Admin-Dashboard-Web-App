@@ -39,8 +39,8 @@ export const FOOTER_GROUPS = [
     title: "Company",
     links: [
       {
-        label: "Why ASMS",
-        href: `#${MARKETING_ROUTES.SECTIONS.WHY_ASMS}`,
+        label: "Why Gate-G",
+        href: `#${MARKETING_ROUTES.SECTIONS.WHY_GATE_G}`,
       },
       {
         label: "For Everyone",

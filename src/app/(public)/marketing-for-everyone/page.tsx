@@ -19,7 +19,7 @@ export default function MarketingForEveryone() {
           </h2>
 
           <p className="mt-6 text-base leading-7 text-muted-foreground sm:text-lg">
-            Every role has different responsibilities. ASMS gives each one the
+            Every role has different responsibilities. Gate-G gives each one the
             right tools while keeping the entire society connected.
           </p>
         </div>

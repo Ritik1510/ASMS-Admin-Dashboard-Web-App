@@ -50,7 +50,7 @@ function MarketingHeader() {
           >
             <Image
               src="/logo.png"
-              alt="ASMS"
+              alt="Gate-G"
               width={40}
               height={40}
               priority
