@@ -15,7 +15,7 @@ export default async function DashboardLayout({ children }: Readonly<{ children:
     <SidebarProvider>
       <div className='font-product flex min-h-screen w-full'>
         <AppSidebar />
-        <main className='flex-1 overflow-y-auto p-1 md:p-1.5 lg:p-2'>
+        <main className='flex-1 overflow-y-auto p-1 md:p-1.5 lg:p-2 relative'>
           <div>
             {children}
           </div>
