@@ -13,12 +13,12 @@ export default function MarketingEarlyAccess() {
           </p>
 
           <h2 className="mt-5 text-3xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            Ready to bring your society onto ASMS?
+            Ready to bring your society onto Gate-G?
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
             We&apos;re working with a limited number of societies during the
-            early stage of ASMS. Join us, try the platform, and help shape
+            early stage of Gate-G. Join us, try the platform, and help shape
             what we build next.
           </p>
 

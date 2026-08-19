@@ -14,7 +14,7 @@ import { Logo } from "@/components/ui/customs/project-logo-provider";
 export const getDashboardSidebarHeaderConfig = (username: string): SidebarHeaderConfig => ({
   id: "header",
   icon: Logo, // <--- icon of this project
-  label: "AxSMS",
+  label: "Gate-G",
   username: username, // Dynamic value
   href: "#",
 });

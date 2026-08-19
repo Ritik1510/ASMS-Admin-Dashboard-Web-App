@@ -15,7 +15,7 @@ export default function MarketingPricing() {
           </h2>
 
           <p className="mt-6 text-base leading-7 text-muted-foreground sm:text-lg">
-            Start with the tools your society needs today. As ASMS grows, your
+            Start with the tools your society needs today. As Gate-G grows, your
             plan can grow with it.
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function MarketingPricing() {
 
                 <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">
                   Everything your society needs to start managing its everyday
-                  operations through ASMS.
+                  operations through Gate-G.
                 </p>
               </div>
 
@@ -69,7 +69,7 @@ export default function MarketingPricing() {
             <div className="mt-10">
               <p className="text-sm leading-6 text-muted-foreground">
                 We&apos;re currently working with a limited number of societies
-                as we build and improve the first version of ASMS.
+                as we build and improve the first version of Gate-G.
               </p>
             </div>
           </div>

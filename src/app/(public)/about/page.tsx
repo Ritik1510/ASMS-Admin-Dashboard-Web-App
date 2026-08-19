@@ -6,7 +6,7 @@ function MarketingAbout() {
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em]" style={{color: 'var(--c-brand-500)'}}>
-            Why ASMS
+            Why Gate-G
           </p>
 
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-5xl">
@@ -52,7 +52,7 @@ function MarketingAbout() {
 
         <div className="mt-16 border-t border-border pt-10">
           <p className="max-w-3xl text-xl font-medium leading-8 tracking-tight text-foreground sm:text-2xl">
-            ASMS brings these everyday operations into one connected system
+            Gate-G brings these everyday operations into one connected system
             for the people who actually run and live in the society.
           </p>
         </div>

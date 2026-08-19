@@ -14,7 +14,7 @@ export default function MarketingFeatures() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-            ASMS brings the core operations of a residential society into one
+            Gate-G brings the core operations of a residential society into one
             connected platform, without adding unnecessary complexity.
           </p>
         </div>

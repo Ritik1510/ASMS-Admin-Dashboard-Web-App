@@ -12,7 +12,7 @@ function MarketingFooter() {
               href="/"
               className="inline-flex items-center text-lg font-semibold tracking-tight text-foreground"
             >
-              ASMS
+              Gate-G
             </Link>
 
             <p className="mt-4 text-sm leading-6 text-muted-foreground">
@@ -78,7 +78,7 @@ function MarketingFooter() {
                 href="https://github.com/moder-emissary-org"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="ASMS GitHub"
+                aria-label="Gate-G GitHub"
                 className="text-xs text-muted-foreground transition-colors hover:text-foreground"
               >
                 GitHub

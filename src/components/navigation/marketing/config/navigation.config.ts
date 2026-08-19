@@ -3,10 +3,10 @@ import { NavigationItem } from "../types/types";
 
 export const navigation: NavigationItem[] = [
   {
-    id: "why-asms",
-    label: "Why ASMS",
+    id: "why-gate-g",
+    label: "Why Gate-G",
     type: "section",
-    href: `#${MARKETING_ROUTES.SECTIONS.WHY_ASMS}`,
+    href: `#${MARKETING_ROUTES.SECTIONS.WHY_GATE_G}`,
   },
   {
     id: "how-it-works",

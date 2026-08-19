@@ -31,7 +31,7 @@ export function FeatureDevelopmentCard({
           <p className="mt-4 text-sm leading-6 text-muted-foreground sm:text-base">
             {description ??
               `We’re actively working on the ${title.toLowerCase()} module and
-              refining it as part of the ASMS MVP.`}
+              refining it as part of the Gate-G MVP.`}
           </p>
 
           <p className="mt-4 text-sm leading-6 text-muted-foreground">
@@ -46,7 +46,7 @@ export function FeatureDevelopmentCard({
             </Link>.
           </p>
           <p className="mt-4 text-sm leading-6 text-muted-foreground">
-            Thank you for visiting ASMS and taking the time to explore the
+            Thank you for visiting Gate-G and taking the time to explore the
             platform. We’re building this product step by step, and this
             section will become available as development progresses.
           </p>
