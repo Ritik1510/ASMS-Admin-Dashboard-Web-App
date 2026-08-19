@@ -61,21 +61,23 @@ function MarketingFooter() {
 
             <div className="flex items-center gap-5">
               <Link
-                href="/privacy"
+                href="/legal/privacy-policy"
+                prefetch={false} 
                 className="text-xs text-muted-foreground transition-colors hover:text-foreground"
               >
                 Privacy
               </Link>
 
               <Link
-                href="/terms"
+                href="/legal/terms-and-conditions"
+                prefetch={false} 
                 className="text-xs text-muted-foreground transition-colors hover:text-foreground"
               >
                 Terms
               </Link>
 
               <Link
-                href="https://github.com/moder-emissary-org"
+                href="https://github.com/ritik1510"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Gate-G GitHub"
