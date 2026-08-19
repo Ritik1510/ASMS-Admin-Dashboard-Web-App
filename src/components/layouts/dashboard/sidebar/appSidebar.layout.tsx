@@ -14,6 +14,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
+  SidebarTrigger,
 } from '@/components/ui/sidebar'
 import { UserButton } from '@clerk/nextjs'
 import { currentUser } from '@clerk/nextjs/server'
@@ -25,8 +26,6 @@ export default async function AppSidebar() {
   const headerConfig = getDashboardSidebarHeaderConfig(fullName);
   return (
     <Sidebar variant="sidebar" collapsible="icon">
-      {/* TODO: make the configuratiion data for these components */}
-
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -44,12 +43,8 @@ export default async function AppSidebar() {
       </SidebarHeader>
 
       <SidebarContent>
-
         <SidebarGroup>
           <SidebarGroupLabel>Features</SidebarGroupLabel>
-          {/* <SidebarGroupAction>
-            <Plus /> <span className="sr-only">Add Project</span>
-          </SidebarGroupAction> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {
@@ -67,7 +62,6 @@ export default async function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-
       </SidebarContent>
 
       <SidebarFooter>

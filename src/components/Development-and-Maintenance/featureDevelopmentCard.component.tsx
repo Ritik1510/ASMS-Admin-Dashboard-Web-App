@@ -14,7 +14,7 @@ export function FeatureDevelopmentCard({
 }: FeatureDevelopmentCardProps) {
   return (
     <Card className="mt-6 overflow-hidden border-border/70 shadow-sm">
-      <CardContent className="flex min-h-[420px] flex-col items-center justify-center px-6 py-12 text-center sm:px-10">
+      <CardContent className="flex min-h-105 flex-col items-center justify-center px-6 py-12 text-center sm:px-10">
         <div className="flex size-14 items-center justify-center rounded-2xl border border-border bg-muted">
           <Construction className="size-6 text-muted-foreground" />
         </div>
@@ -34,6 +34,17 @@ export function FeatureDevelopmentCard({
               refining it as part of the ASMS MVP.`}
           </p>
 
+          <p className="mt-4 text-sm leading-6 text-muted-foreground">
+            To test the project and its feature/functionalities{" "} 
+            <Link
+              href="https://github.com/moder-emissary-org/be-me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-600 font-bold hover:underline"
+            >
+              See the Projects README.md
+            </Link>.
+          </p>
           <p className="mt-4 text-sm leading-6 text-muted-foreground">
             Thank you for visiting ASMS and taking the time to explore the
             platform. We’re building this product step by step, and this
