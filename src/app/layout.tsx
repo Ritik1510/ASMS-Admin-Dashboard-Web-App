@@ -30,14 +30,14 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://admin.thinkwithoutlimits.com.com",
+    url: "https://admin.thinkwithoutlimits.com",
     siteName: "Gate-G",
     title: "Gate-G — Apartment & Society Management System",
     description:
-      "Manage residents, apartments, visitors, complaints, notices, and everyday society operations with Gate-G.",
+      "Gate-G makes it simple to manage your society and all its everyday tasks with ease.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/opengraph-image.webp",
         width: 1200,
         height: 630,
         alt: "Gate-G — Apartment & Society Management System",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/icon.png",
+    icon: "/icon.svg",
     apple: "/apple-icon.png",
   },
 }
