@@ -28,13 +28,10 @@ function MarketingHeader() {
   return (
     <header
       className={`
-        sticky top-2 z-20 mx-1.5 min-h-16
-        grid
-        rounded-lg
-
+        sticky top-3 z-20 min-h-16 
+        grid rounded-lg p-1 m-3
+        
         transition-all duration-400 ease-out
-
-        px-2 lg:p-3
         
         ${isScrolled
           ? "border-b border-black/5 bg-brand-300/70 shadow-sm backdrop-blur-sm backdrop-saturate-150 dark:border-white/10 dark:bg-black/50"
@@ -42,7 +39,7 @@ function MarketingHeader() {
         }
       `}
     >
-      <div className="flex justify-between items-center w-full">
+      <div className="flex justify-between items-center w-full px-2 pt-2">
         <div className="min-h-10">
           <Link
             href="/"
