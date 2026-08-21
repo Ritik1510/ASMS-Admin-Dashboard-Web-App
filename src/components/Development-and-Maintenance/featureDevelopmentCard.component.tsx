@@ -3,8 +3,6 @@
 import Link from 'next/link'
 import { ArrowLeft, Construction, ExternalLink } from 'lucide-react'
 
-import { Card, CardContent } from '@/components/ui/card'
-
 interface FeatureDevelopmentCardProps {
   title: string
   description?: string
@@ -39,7 +37,7 @@ function DeveloperAccess() {
           </p>
 
           <p className="mt-1 text-sm leading-6 text-muted-foreground">
-            Use our test frontend to obtain a temporary Clerk access token.
+            Use our test frontend to obtain a temporary Clerk access token from browser developer console tool.
             This token is required when calling authenticated API endpoints.
           </p>
 
@@ -115,8 +113,8 @@ export function FeatureDevelopmentCard({
   description,
 }: FeatureDevelopmentCardProps) {
   return (
-    <Card className="mt-6 overflow-hidden border-border/70 shadow-sm">
-      <CardContent className="flex min-h-105 flex-col items-center justify-center px-6 py-12 text-center sm:px-10">
+    <div className="mt-6 overflow-hidden border border-border/70 bg-muted/30">
+      <div className="flex min-h-105 flex-col items-center justify-center text-center p-3">
         <div className="flex size-14 items-center justify-center rounded-2xl border border-border bg-muted">
           <Construction className="size-6 text-muted-foreground" />
         </div>
@@ -159,7 +157,7 @@ export function FeatureDevelopmentCard({
           <ArrowLeft className="size-4" />
           Back to Public Page
         </Link>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   )
 }
