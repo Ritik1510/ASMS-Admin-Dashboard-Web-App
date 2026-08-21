@@ -46,7 +46,7 @@ export function ScrollToTop({
       }}
       {...props}
     >
-      {children ?? <ArrowUpIcon className="size-5" />}
+      {children ?? <ArrowUpIcon className="size-5 cursor-pointer" />}
     </Button>
   );
 }

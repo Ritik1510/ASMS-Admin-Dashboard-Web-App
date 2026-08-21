@@ -3,7 +3,7 @@ import { navigation } from "../config/navigation.config"
 
 function MarketingHeaderNavigation() {
   return (
-    <div className="flex justify-center items-center gap-2 md:gap-3 lg:gap-5 flex-wrap">
+    <div className="flex justify-center items-center gap-2 md:gap-3 lg:gap-6 flex-wrap">
       {navigation.map((item) => (
         <Link 
         key={item.id}

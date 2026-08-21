@@ -36,7 +36,7 @@ export function PageHeader({ config }: Props) {
               key={tag.label}
               className={cn(
                 buttonVariants({ variant: "outline" }),
-                "shrink-0 whitespace-nowrap text-xs sm:text-sm md:text-sm lg:text-base] hover:bg-brand-300 border-brand-900"
+                "shrink-0 whitespace-nowrap text-xs sm:text-sm md:text-sm lg:text-base hover:bg-brand-300 border-brand-900 text-brand-600"
               )}
             >
               {tag.icon && <tag.icon className="size-2.5 md:size-3 lg:size-4" />}

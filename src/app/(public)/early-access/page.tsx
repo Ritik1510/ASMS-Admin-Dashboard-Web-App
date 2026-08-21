@@ -5,7 +5,7 @@ import { MARKETING_ROUTES } from "@/components/navigation/dashboard/routes/marke
 
 export default function MarketingEarlyAccess() {
   return (
-    <section className="relative overflow-hidden px-6 py-24 sm:py-32">
+    <section className="relative overflow-hidden px-6 py-20 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.25em]" style={{color: 'var(--c-brand-500)'}}>
