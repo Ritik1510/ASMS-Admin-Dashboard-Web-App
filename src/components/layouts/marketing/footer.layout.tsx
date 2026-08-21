@@ -4,7 +4,7 @@ import { FOOTER_GROUPS } from './configs/footer.config'
 
 function MarketingFooter() {
   return (
-    <footer className="border-t border-border bg-muted/40">
+    <footer className="border-t border-border bg-brand-300/70">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 px-6 py-14 sm:px-8 lg:grid-cols-[1.5fr_3fr] lg:gap-16 lg:px-10 lg:py-16">
           <div className="max-w-sm">
@@ -15,14 +15,14 @@ function MarketingFooter() {
               Gate-G
             </Link>
 
-            <p className="mt-4 text-sm leading-6 text-muted-foreground">
+            <p className="mt-4 text-sm lg:text-md leading-6 text-muted-foreground">
               A connected management platform for residential societies,
               bringing admins, guards, and residents into one system.
             </p>
 
             <Link
               href="/"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-brand"
+              className="mt-6 inline-flex items-center gap-2 text-sm lg:text-md font-medium text-foreground transition-colors hover:text-brand"
             >
               Back to top
               <ArrowUp className="size-4" />
@@ -32,7 +32,7 @@ function MarketingFooter() {
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
             {FOOTER_GROUPS.map((group) => (
               <div key={group.title}>
-                <h2 className="text-sm font-semibold text-foreground">
+                <h2 className="text-sm lg:text-md font-semibold text-foreground">
                   {group.title}
                 </h2>
 
@@ -41,7 +41,7 @@ function MarketingFooter() {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                        className="text-sm lg:text-md text-muted-foreground transition-colors hover:text-foreground"
                       >
                         {link.label}
                       </Link>
@@ -55,7 +55,7 @@ function MarketingFooter() {
 
         <div className="border-t border-border">
           <div className="flex flex-col gap-4 px-6 py-6 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-            <p className="text-xs text-muted-foreground">
+            <p className="text-sm lg:text-md text-muted-foreground">
               © {new Date().getFullYear()} thinkWithoutLimits.com All rights reserved.
             </p>
 
@@ -63,7 +63,7 @@ function MarketingFooter() {
               <Link
                 href="/legal/privacy-policy"
                 prefetch={false} 
-                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm lg:text-md text-muted-foreground transition-colors hover:text-foreground"
               >
                 Privacy
               </Link>
@@ -71,7 +71,7 @@ function MarketingFooter() {
               <Link
                 href="/legal/terms-and-conditions"
                 prefetch={false} 
-                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm lg:text-md text-muted-foreground transition-colors hover:text-foreground"
               >
                 Terms
               </Link>
@@ -81,7 +81,7 @@ function MarketingFooter() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Gate-G GitHub"
-                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm lg:text-md text-muted-foreground transition-colors hover:text-foreground"
               >
                 GitHub
               </Link>
