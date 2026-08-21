@@ -42,7 +42,7 @@ function MarketingHeader() {
       <div className="flex justify-between items-center w-full px-2 pt-2">
         <div className="min-h-10">
           <Link
-            href="/"
+            href="#"
             className="h-full w-full"
           >
             <Image
