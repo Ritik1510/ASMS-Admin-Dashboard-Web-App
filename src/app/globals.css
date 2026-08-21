@@ -267,3 +267,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* provide smooth behaviour for clickable buttons */
+html {
+  scroll-behavior: smooth;
+}
