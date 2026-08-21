@@ -1,15 +1,15 @@
-# ASMS Admin dashboard web app. 
+# Gate-G Admin dashboard web app. 
 Admin dashboard web app Live here: https://admin.thinkwithoutlimits.com <br>
 Deployed on vercel, usng subdomain of https://thinkwithoutlimits.com
 
 
 # Apartment & Society Management System — Frontend
 
-The ASMS frontend is the web interface for the Apartment & Society Management System. It provides the public marketing website and the authenticated admin dashboard used to manage society operations.
+The Gate-G frontend is the web interface for the Apartment & Society Management System. It provides the public marketing website and the authenticated admin dashboard used to manage society operations.
 
 The frontend is designed around a simple separation:
 
-* **Marketing** — public-facing website that introduces ASMS, its purpose, features, pricing, and early access.
+* **Marketing** — public-facing website that introduces Gate-G, its purpose, features, pricing, and early access.
 * **Dashboard** — authenticated administrative interface for managing society data and operations.
 
 ## Features
@@ -17,8 +17,8 @@ The frontend is designed around a simple separation:
 ### Marketing Website
 
 * Product introduction and positioning
-* Why ASMS section
-* How ASMS works
+* Why Gate-G section
+* How Gate-G works
 * Core product features
 * Admin, guard, and resident overview
 * Pricing / early access
@@ -37,7 +37,7 @@ The dashboard provides the administrative interface for society management, incl
 * Notice management
 * Visitor management
 
-Some modules are currently under active development as the ASMS MVP is being built.
+Some modules are currently under active development as the Gate-G MVP is being built.
 
 ## Technologies
 
