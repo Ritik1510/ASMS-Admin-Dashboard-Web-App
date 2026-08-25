@@ -43,6 +43,7 @@ function DeveloperAccess() {
 
           <Link
             href="https://public-fe-me.vercel.app"
+            target="_blank"
             className="mt-2 inline-flex text-sm font-medium text-red-600 hover:underline"
           >
             Open the test frontend
@@ -115,7 +116,7 @@ export function FeatureDevelopmentCard({
   return (
     <div className="mt-6 overflow-hidden border border-border/70 bg-muted/30">
       <div className="flex min-h-105 flex-col items-center justify-center text-center p-3">
-        <div className="flex size-14 items-center justify-center rounded-2xl border border-border bg-muted">
+        <div className="flex size-14 items-center justify-center rounded-2xl border border-border bg-brand-300">
           <Construction className="size-6 text-muted-foreground" />
         </div>
 
@@ -138,8 +139,10 @@ export function FeatureDevelopmentCard({
                 module and refining it as part of the Gate-G MVP.
               </>
             )}
-
           </p>
+
+
+          <DeveloperAccess />
 
           <p className="mt-4 text-sm leading-6 text-muted-foreground">
             Thank you for visiting Gate-G and taking the time to explore the
@@ -147,9 +150,6 @@ export function FeatureDevelopmentCard({
             section will become available as development progresses.
           </p>
         </div>
-
-        <DeveloperAccess />
-
         <Link
           href="/"
           className="mt-8 inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-brand-300"
