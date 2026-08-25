@@ -14,23 +14,25 @@ export function PageHeader({ config }: Props) {
       className="w-full max-w-4xl mx-auto
         py-3 gap-1 flex"
     >
-      <SidebarTrigger className={"min-[1199px]:absolute min-[1199px]:top-0 min-[1199px]:left-0 hover:bg-brand-300"} />
       <div>
-        <div className="space-y-1"> {/* space-y-1 adds a vertical margin of 0.25rem (which equals 4px) to every child element except the first one */}
-          <h1 className="text-sm text-foreground">
-            {config.title}
-          </h1>
+        <div className="flex justify-start items-center gap-1.5">
+          {/* siderbar trigger button */}
+          <SidebarTrigger className={"min-[1199px]:absolute min-[1199px]:top-0 min-[1199px]:left-0 hover:bg-brand-300"} />
+
+          <div className="space-y-1"> {/* space-y-1 adds a vertical margin of 0.25rem (which equals 4px) to every child element except the first one */}
+            <h1 className="text-sm text-foreground">
+              {config.title}
+            </h1>
+            <p className="text-xs sm:text-sm md:text-sm lg:text-base text-muted-foreground">
+              {config.des}
+            </p>
+          </div>
         </div>
-
-        <p className="text-sm text-muted-foreground">
-          {config.des}
-        </p>
-
+        
         <div
           className="mt-3 w-full gap-1.5
           flex flex-wrap items-center justify-start
-        "
-        >
+        ">
           {config.tags.map((tag) => (
             <a
               key={tag.label}
