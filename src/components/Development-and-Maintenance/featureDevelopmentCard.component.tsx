@@ -114,7 +114,7 @@ export function FeatureDevelopmentCard({
   description,
 }: FeatureDevelopmentCardProps) {
   return (
-    <div className="mt-6 overflow-hidden border border-border/70 bg-muted/30">
+    <div className="mt-2 overflow-hidden border border-border/70 bg-muted/30">
       <div className="flex min-h-105 flex-col items-center justify-center text-center p-3">
         <div className="flex size-14 items-center justify-center rounded-2xl border border-border bg-brand-300">
           <Construction className="size-6 text-muted-foreground" />
