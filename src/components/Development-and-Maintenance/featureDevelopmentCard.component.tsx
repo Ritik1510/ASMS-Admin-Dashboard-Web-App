@@ -11,6 +11,16 @@ interface FeatureDevelopmentCardProps {
 function DeveloperAccess() {
   return (
     <div className="mt-8 w-full max-w-2xl rounded-xl border border-border/70 bg-muted/30 p-5 text-left sm:p-6">
+      <div className='mb-2'>
+        <div className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2">
+          <span className="text-xs font-bold uppercase tracking-wide text-destructive">
+            Note
+          </span>
+          <p className="text-sm text-amber-900">
+            Coming soon: you'll be able to create your own society as an admin.
+          </p>
+        </div>
+      </div>
       <div className="flex items-start gap-3">
         <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg border border-border bg-background">
           <ExternalLink className="size-4 text-muted-foreground" />
