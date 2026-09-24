@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
-import { Cinzel, Elms_Sans, JetBrains_Mono } from 'next/font/google'
+import { Elms_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import { QueryProvider } from '@/state/providers/query-providers'
 
 // marketing
 const marketing_font = Elms_Sans({
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
@@ -68,7 +69,9 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${marketing_font.variable} ${product_font.variable} antialiased`}>
-          {children}
+          <QueryProvider>
+            {children}
+          </QueryProvider>
         </body>
       </html>
     </ClerkProvider>
