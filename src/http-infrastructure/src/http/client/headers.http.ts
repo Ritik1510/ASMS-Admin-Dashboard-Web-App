@@ -9,7 +9,9 @@ export function buildHeaders({
 }: BuildHeadersOptions): Headers {
   const result = new Headers(headers);
 
-  result.set("Accept", "application/json");
+  /** 'content-type: ' means “The body I am sending is JSON.” */
+  /** and 'accept: ' means “I want the server's response to be JSON.” */
+  result.set("content-type", "application/json"); 
 
   if (token) {
     result.set("Authorization", `Bearer ${token}`);
