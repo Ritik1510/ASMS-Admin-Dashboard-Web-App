@@ -31,28 +31,8 @@ function DashboardOnboardingShell({ children }: Readonly<{ children: React.React
     return <SocietyOnboardingLoader />
   }
 
-  console.log("onboarding data: ", data);
-
   if (!data) {
-    return <div className="fixed inset-0 z-40 grid 
-      place-items-center overflow-y-auto 
-      bg-background/80 p-4 backdrop-blur-sm sm:p-6">
-      <div>
-        <div className="flex items-center justify-center">
-          <p>You are not a admin, data not found</p>
-        </div>
-        <Link
-          href="/"
-          className="mt-1 inline-flex items-center gap-2 
-          rounded-md border border-border bg-background 
-          px-4 py-2 text-sm font-medium transition-colors 
-          hover:bg-brand-300"
-        >
-          <ArrowLeft className="size-4" />
-          Back to Public Page
-        </Link>
-      </div>
-    </div>
+    return <SocietyOnboardingLoader />
   }
 
   if (data?.authority?.role !== "admin") {
