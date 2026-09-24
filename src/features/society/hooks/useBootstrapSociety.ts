@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { bootstrapSocietyAction } from "../api/bootstrap-society.api"
+import { bootstrapSocietyAction } from "../dal/bootstrap-society.dal"
 import { SocietyOnboardingInput } from "../types/society.types";
 import { usersQueryKeys } from "@/features/users/queryKeys/query-keys";
 import { toast } from "sonner";
