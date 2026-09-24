@@ -5,6 +5,7 @@ import SocietyOnboardingModel from "../society-onboarding-model";
 import { Spinner } from "@/components/ui/spinner";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { SocietyOnboardingLoader } from "../society-onboarding-loader";
 
 /**
  * Onboarding Auth checks  
