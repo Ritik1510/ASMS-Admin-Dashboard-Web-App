@@ -1,10 +1,10 @@
-
-import { FeatureDevelopmentCard } from "@/components/Development-and-Maintenance/featureDevelopmentCard.component"
 import { PageHeader } from "@/components/shared/dashboard/tabPageHeader/tabPageHeader.component"
 import { tabPageHeaderConfig } from "@/components/shared/dashboard/tabPageHeader/tabPageHeader.config"
-import { useApiClient } from "@/hooks/use-api-client"
-import { systemServerApi } from "@/http-infrastructure/src/accessors/system/system-server.accessors"
-import { createHttpClient } from "@/http-infrastructure/src/http/client/createHttpClient.http"
+// import { useCurrentUser } from "@/features/users/hooks/use-current-user"
+import { FeatureDevelopmentCard } from "@/components/Development-and-Maintenance/featureDevelopmentCard.component"
+// import { useApiClient } from "@/hooks/use-api-client"
+// import { systemServerApi } from "@/http-infrastructure/src/accessors/system/system-server.accessors"
+// import { createHttpClient } from "@/http-infrastructure/src/http/client/createHttpClient.http"
 
 interface User {
   id: number;
@@ -13,21 +13,40 @@ interface User {
   role: string;
 }
 
-async function Users() {
+function Users() {
+
   /**
-   * LEVEL 1 — Server-side API accessor
+   *  ------ TANSTACK QUERY VERY INITIAL TEST ----- 
+  */
+  /*
+  const { data: me, isPending, isError, error } = useCurrentUser();
+  console.log("Users page - current user:", me);
+
+  if (isPending) {
+    console.log("Current user is loading...");
+  }
+
+  if (isError) {
+    console.error("Current user request failed:", error);
+  }
+  */
+
+  /**
+   * --------- LEVEL 1 — Server-side API accessor --------
    *
    * The request is executed on the server through the server accessor.
    * The server accessor is responsible for providing the authentication
    * capability required by the HTTP client.
    *
    * This is the server-side request path.
-   */
-  const me = await systemServerApi.request<User[]>("/api/v1/users/me");
-  console.log("test of systemServerApi: ", me);
+  */
+  /** 
+    * const me = await systemServerApi.request<User[]>("/api/v1/users/me");
+    * console.log("test of systemServerApi: ", me);
+  */
 
   /**
-   * LEVEL 2 — Client-side API hook
+   *  -------- LEVEL 2 — Client-side API hook --------- 
    *
    * The request is initiated from a Client Component through the
    * `useApiClient` hook.
@@ -49,7 +68,7 @@ async function Users() {
   */
 
   /**
-   * LEVEL 3 — Direct HTTP client construction
+   * -------- LEVEL 3 — Direct HTTP client construction ------- 
    *
    * This bypasses the higher-level API hook/accessor and directly creates
    * an HTTP client by supplying the authentication capability.
@@ -71,7 +90,7 @@ async function Users() {
   */
 
   /**
-   * LEVEL 4 — Direct token acquisition
+   *  --------- LEVEL 4 — Direct token acquisition --------- 
    *
    * The token is acquired explicitly by the caller and then passed to
    * the API functions.
@@ -125,6 +144,25 @@ async function Users() {
       </button>
       */}
 
+      {/*
+      <div>
+        <h2>Current User</h2>
+
+        {isPending && <p>Loading...</p>}
+
+        {isError && (
+          <p>
+            Failed to load current user.
+          </p>
+        )}
+
+        {me && (
+          <pre>
+            {JSON.stringify(me, null, 2)}
+          </pre>
+        )}
+      </div>    
+      */}
       {/* Invitation + overview card */}
       {/* User table */}
       <FeatureDevelopmentCard title="Users" />
