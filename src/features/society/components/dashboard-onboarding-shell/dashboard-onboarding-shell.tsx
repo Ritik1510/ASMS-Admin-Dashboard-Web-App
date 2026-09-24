@@ -27,9 +27,7 @@ function DashboardOnboardingShell({ children }: Readonly<{ children: React.React
   }
 
   if (error?.details?.code === "USER_NOT_PROVISIONED") {
-    return (
-      <SocietyOnboardingModel />
-    )
+    return <SocietyOnboardingLoader />
   }
 
   console.log("onboarding data: ", data);
