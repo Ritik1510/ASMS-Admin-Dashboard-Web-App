@@ -5,6 +5,7 @@ import { useAuth } from "@clerk/nextjs";
 import { useMemo } from "react";
 
 /**
+ * ----- client side auth binder -----
  * Obtain the client-side authentication capability 
  * from the React/Clerk context and 
  * inject it into the generic HTTP client. 

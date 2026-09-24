@@ -68,7 +68,7 @@ export async function request<T>(
 
   /* Convert non-2xx responses into standardized HTTP errors. */
   if (!response.ok) {
-    throwHttpError(response);
+    await throwHttpError(response);
   }
 
   /* Parse the successful response into the expected application type. */

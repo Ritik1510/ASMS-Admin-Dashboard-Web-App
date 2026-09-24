@@ -27,7 +27,12 @@ export default function PublicHomePage() {
             manage the everyday operations of a residential society.
           </p>
 
-          <Show when="signed-out">
+          {/* 
+          show: only hides its children according to clerk,
+          check: https://clerk.com/docs/react/reference/components/control/show ,  
+          and can be accessed via the browser developer tools even if the user failed to authenticate,
+          */}
+          <Show when="signed-out" fallback={<p className='text-xs'>Login yourself for dashboard!</p>}>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link
                 href={MARKETING_ROUTES.AUTH.SIGN_IN}

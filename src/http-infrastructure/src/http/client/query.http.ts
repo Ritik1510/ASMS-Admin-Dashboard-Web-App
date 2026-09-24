@@ -25,7 +25,6 @@ export function buildQueryString(
    * into the final URL query string. 
   */
   for (const [key, value] of Object.entries(query)) {
-    console.log(": ", Object.entries(query))
     if (value !== undefined && value !== null) {
       params.set(key, String(value));
     }
