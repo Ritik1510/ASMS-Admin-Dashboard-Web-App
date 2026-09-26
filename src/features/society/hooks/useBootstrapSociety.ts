@@ -22,7 +22,7 @@ export const useBootstrapSociety = () => {
     },
     onError: () => {
       toast.error(
-        "society not bootstraped!",
+        "society is not bootstraped!",
         { position: "top-center" }
       );
     }
