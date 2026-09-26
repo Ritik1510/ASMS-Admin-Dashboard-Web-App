@@ -127,12 +127,12 @@ export function SocietyOnboardingForm() {
           ) : bootstrapSociety.isSuccess ? (
             "Society Created"
           ) : bootstrapSociety.error ? (
-            "An account with this email address already exists."
+            <span className="text-[clamp(0.75rem,2vw+0.5rem,0.875rem)]">"Something went wrong, Refresh & Try again!"</span>
           ) : (
             "Create Society"
           )}
         </Button>
-        <p 
+        <p
           className="text-center 
           text-[clamp(0.75rem,2vw+0.5rem,0.875rem)] 
           leading-5 text-text-tertiary">
