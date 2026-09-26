@@ -17,7 +17,7 @@ const product_font = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://admin.thinkwithoutlimits.com"),
+  metadataBase: new URL("https://gateg.thinkwithoutlimits.com"),
 
   title: {
     default: "Gate-G — Apartment & Society Management System",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://admin.thinkwithoutlimits.com",
+    url: "https://gateg.thinkwithoutlimits.com",
     siteName: "Gate-G",
     title: "Gate-G — Apartment & Society Management System",
     description:
