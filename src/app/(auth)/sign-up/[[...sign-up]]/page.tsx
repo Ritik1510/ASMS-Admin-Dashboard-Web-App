@@ -1,8 +1,8 @@
 import { Spinner } from '@/components/ui/spinner'
-import { SignIn, ClerkLoaded, ClerkLoading } from '@clerk/nextjs'
+import { SignUp, ClerkLoaded, ClerkLoading } from '@clerk/nextjs'
 import { authAppearance } from '../../utills/clerkAppearance'
 
-export default function SignInPage() {
+export default function SignUpPage() {
   return (
     <div className="grid w-auto items-center justify-center gap-4 font-marketing!">
       <ClerkLoading>
@@ -14,12 +14,12 @@ export default function SignInPage() {
 
       <ClerkLoaded>
         <div className="grid gap-0">
-          <h1 className="mx-auto text-xl font-semibold">Welcome back</h1>
-          <p className="mx-auto text-sm">Sign in to access the product dashboard.</p>
+          <h1 className="mx-auto text-xl font-semibold">Create your account</h1>
+          <p className="mx-auto text-sm">Set up your account to continue into the dashboard.</p>
         </div>
 
-        {/* <SignIn forceRedirectUrl="/dashboard" signUpUrl="/sign-up" /> */}
-        <SignIn appearance={authAppearance} />
+        {/* <SignUp forceRedirectUrl="/dashboard" signInUrl="/sign-in" /> */}
+        <SignUp appearance={authAppearance} />
       </ClerkLoaded>
     </div>
   )
