@@ -1,13 +1,9 @@
-"use client"
-
 import Link from "next/link"
 import { useAuth, UserButton, ClerkLoading, ClerkLoaded, ClerkFailed } from "@clerk/nextjs"
-import { buttonVariants } from "@/components/ui/button"
 import { Spinner } from "@/components/ui/spinner"
-import { cn } from "@/lib/utils"
 import { MARKETING_ROUTES } from "@/components/navigation/dashboard/routes/marketing/marketing.routes"
 
-const authLinkClass = "rounded-full px-4 py-2 text-sm font-medium transition hover:border-[0.654px] inline-flex items-center gap-2 hover:border-brand-900 hover:bg-brand-300"
+const authLinkClass = "rounded-full px-4 py-2 text-sm font-medium transition hover:border-[0.654px] inline-flex items-center gap-2 hover:border-brand-900 hover:bg-brand-300 dark:bg-black/50"
 
 const containerClass =
   "flex items-center justify-center gap-1.5 sm:gap-2 md:gap-2.5"
@@ -30,7 +26,7 @@ function AuthButtosProvider() {
   }
 
   return (
-    <div>
+    <div className="flex items-center justify-center">
       <Link
         href={MARKETING_ROUTES.PRODUCT.DASHBOARD}
         target="_blank"
@@ -48,9 +44,16 @@ export function MarketingAuthButtons() {
   return (
     <div className={containerClass}>
       <ClerkLoading>
-        <div className="flex items-center justify-center gap-1.5" role="status" aria-live="polite">
-          <p className="text-sm md:text-base underline">Auth Loading</p>
-          <Spinner />
+        <div
+          role="status"
+          aria-live="polite"
+        >
+          <div className="flex" aria-hidden="true">
+            <div className="h-11 p-2 w-auto rounded-full bg-brand-300 flex items-center justify-center gap-1">
+              <Spinner />
+              <p className="text-xs font-bold"><span className='animate-pulse'>Preparing Access Options…</span></p>
+            </div>
+          </div>
         </div>
       </ClerkLoading>
 
@@ -58,7 +61,6 @@ export function MarketingAuthButtons() {
         <AuthButtosProvider />
       </ClerkLoaded>
 
-      {/* Clerk failed to load: never render Dashboard/UserButton here */}
       <ClerkFailed>
         <p className="text-sm text-muted-foreground" role="alert">
           Authentication unavailable

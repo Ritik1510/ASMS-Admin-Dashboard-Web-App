@@ -1,26 +1,11 @@
-import { Spinner } from '@/components/ui/spinner'
-import { SignIn, ClerkLoaded, ClerkLoading } from '@clerk/nextjs'
+import { SignIn } from '@clerk/nextjs'
 import { authAppearance } from '../../utills/clerkAppearance'
+import { AuthShell } from '../../utills/authShell'
 
 export default function SignInPage() {
   return (
-    <div className="grid w-auto items-center justify-center gap-4 font-marketing!">
-      <ClerkLoading>
-        <div className="flex items-center justify-center py-4">
-          <Spinner />
-          <span className="ml-2 text-sm">Loading form...</span>
-        </div>
-      </ClerkLoading>
-
-      <ClerkLoaded>
-        <div className="grid gap-0">
-          <h1 className="mx-auto text-xl font-semibold">Welcome back</h1>
-          <p className="mx-auto text-sm">Sign in to access the product dashboard.</p>
-        </div>
-
-        {/* <SignIn forceRedirectUrl="/dashboard" signUpUrl="/sign-up" /> */}
-        <SignIn appearance={authAppearance} />
-      </ClerkLoaded>
-    </div>
+    <AuthShell title="Welcome back" description="Sign in to access the product dashboard.">
+      <SignIn appearance={authAppearance} />
+    </AuthShell>
   )
 }
