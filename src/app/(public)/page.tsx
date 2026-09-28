@@ -6,7 +6,7 @@ import MarketingFeatures from './features/page'
 import MarketingForEveryone from './marketing-for-everyone/page'
 import MarketingPricing from './pricing/page'
 import MarketingEarlyAccess from './early-access/page'
-import { Show } from '@clerk/nextjs'
+import { HeroAuthActions } from '@/components/layouts/marketing/heroSection/HeroAuthActions'
 
 export default function PublicHomePage() {
   return (
@@ -32,35 +32,7 @@ export default function PublicHomePage() {
           check: https://clerk.com/docs/react/reference/components/control/show ,  
           and can be accessed via the browser developer tools even if the user failed to authenticate,
           */}
-          <Show when="signed-out" fallback={<p className='text-xs'>Login yourself for dashboard!</p>}>
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link
-                href={MARKETING_ROUTES.AUTH.SIGN_IN}
-                className="rounded-full px-6 py-3 text-sm font-medium transition hover:border-[0.654px] inline-flex items-center gap-2 hover:border-brand-900 hover:bg-brand-300"
-              >
-                Sign in
-              </Link>
-
-              <Link
-                href={MARKETING_ROUTES.AUTH.SIGN_UP}
-                className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium transition border-brand-900 hover:bg-brand-300"
-              >
-                Create account
-              </Link>
-            </div>
-          </Show>
-
-          <Show when="signed-in">
-            <div className="mt-10 flex justify-center">
-              <Link
-                target="_blank"
-                href={MARKETING_ROUTES.PRODUCT.DASHBOARD}
-                className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium transition border-brand-900 hover:bg-brand-300"
-              >
-                Dashboard
-              </Link>
-            </div>
-          </Show>
+          <HeroAuthActions />
         </div>
       </section>
 
