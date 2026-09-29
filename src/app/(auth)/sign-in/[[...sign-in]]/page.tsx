@@ -4,7 +4,10 @@ import { AuthShell } from '../../utills/authShell'
 
 export default function SignInPage() {
   return (
-    <AuthShell title="Welcome back" description="Sign in to access the product dashboard.">
+    <AuthShell
+      title="Gate-G"
+      description="Sign in to manage your society."
+    >
       <SignIn appearance={authAppearance} />
     </AuthShell>
   )
