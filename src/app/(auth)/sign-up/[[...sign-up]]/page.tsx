@@ -6,7 +6,7 @@ export default function SignUpPage() {
   return (
     <AuthShell
       title="Gate-G"
-      description="Set up your account to continue into the dashboard."
+      description="Get started managing your society."
     >
       <SignUp appearance={authAppearance} />
     </AuthShell>
