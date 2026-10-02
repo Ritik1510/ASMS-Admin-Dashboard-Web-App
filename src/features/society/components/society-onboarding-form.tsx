@@ -10,9 +10,13 @@ import { useForm } from "react-hook-form";
 import { Spinner } from "@/components/ui/spinner";
 
 export function SocietyOnboardingForm() {
-  const bootstrapSociety = useBootstrapSociety();
+  const { mutate, isPending, isError, isSuccess, } = useBootstrapSociety();
 
-  const form = useForm<SocietyOnboardingInput>({
+  const {
+    register,
+    handleSubmit,
+    formState: { isSubmitting, errors },
+  } = useForm<SocietyOnboardingInput>({
     resolver: zodResolver(societyFormSchema),
     defaultValues: {
       name: "",
@@ -21,14 +25,14 @@ export function SocietyOnboardingForm() {
   });
 
   const onSubmit = (values: SocietyOnboardingInput) => {
-    bootstrapSociety.mutate(values);
+    mutate(values);
   };
 
-  const nameError = form.formState.errors.name?.message;
-  const addressError = form.formState.errors.address?.message;
+  const nameError = errors.name?.message;
+  const addressError = errors.address?.message;
 
   return (
-    <form className="space-y-5" onSubmit={form.handleSubmit(onSubmit)} noValidate>
+    <form className="space-y-5" onSubmit={handleSubmit(onSubmit)} noValidate>
       <div className="space-y-2">
         <label
           className="text-sm font-medium text-text-heading"
@@ -37,22 +41,23 @@ export function SocietyOnboardingForm() {
           Society name
         </label>
         <Input
-          {...form.register("name")}
+          {...register("name")}
           aria-describedby={nameError ? "society-name-error" : undefined}
           aria-invalid={Boolean(nameError)}
           autoComplete="organization"
+
           className="h-11 rounded-xl border-brand-300 bg-background 
             px-3.5 text-[clamp(0.75rem,2vw+0.5rem,0.875rem)] 
             text-text-primary placeholder:text-text-tertiary 
             focus-visible:border-brand-700 focus-visible:ring-brand-500/25"
-          disabled={bootstrapSociety.isPending || bootstrapSociety.isError}
+
+          disabled={isSubmitting || isSuccess}
           id="society-name"
           placeholder="e.g. Palm Grove Residency"
         />
         {nameError && (
           <p
-            className="text-[clamp(0.75rem,2vw+0.5rem,0.875rem)] 
-            text-destructive"
+            className="text-[clamp(0.75rem,2vw+0.5rem,0.875rem)] text-destructive"
             id="society-name-error"
             role="alert"
           >
@@ -70,7 +75,7 @@ export function SocietyOnboardingForm() {
           Society address
         </label>
         <textarea
-          {...form.register("address")}
+          {...register("address")}
           aria-describedby={addressError ? "society-address-error" : undefined}
           aria-invalid={Boolean(addressError)}
           autoComplete="street-address"
@@ -86,7 +91,7 @@ export function SocietyOnboardingForm() {
           aria-invalid:border-destructive aria-invalid:ring-3 
           aria-invalid:ring-destructive/20"
 
-          disabled={bootstrapSociety.isPending || bootstrapSociety.isError}
+          disabled={isSubmitting || isSuccess}
           id="society-address"
           placeholder="Building, street, locality, city and postal code"
         />
@@ -107,10 +112,11 @@ export function SocietyOnboardingForm() {
           text-background shadow-sm hover:bg-brand-800 
           focus-visible:border-brand-700 
           focus-visible:ring-brand-500/35"
+
           disabled={
-            bootstrapSociety.isPending ||
-            bootstrapSociety.isSuccess ||
-            bootstrapSociety.isError
+            isPending ||
+            isSuccess ||
+            isSubmitting
           }
           type="submit"
         >
@@ -119,15 +125,15 @@ export function SocietyOnboardingForm() {
             Their all the states for button's label will be managed,
             use claude's chat for more context
           */}
-          {bootstrapSociety.isPending ? (
+          {isPending ? (
             <>
               <Spinner className="size-3" />
               Creating society...
             </>
-          ) : bootstrapSociety.isSuccess ? (
+          ) : isSuccess ? (
             "Society Created"
-          ) : bootstrapSociety.error ? (
-            <span className="text-[clamp(0.75rem,2vw+0.5rem,0.875rem)]">"Something went wrong, Refresh & Try again!"</span>
+          ) : isError ? (
+            <span className="text-[clamp(0.75rem,2vw+0.5rem,0.875rem)]">"Something went wrong, Try again!"</span>
           ) : (
             "Create Society"
           )}
@@ -136,7 +142,7 @@ export function SocietyOnboardingForm() {
           className="text-center 
           text-[clamp(0.75rem,2vw+0.5rem,0.875rem)] 
           leading-5 text-text-tertiary">
-          {bootstrapSociety.isError ? "" : "You can complete the rest of your society settings after setup."}
+          {isError ? "" : "You can complete the rest of your society settings after setup."}
         </p>
       </div>
     </form>
