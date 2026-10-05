@@ -17,7 +17,7 @@ function DeveloperAccess() {
             Note
           </span>
           <p className="text-sm text-amber-900">
-            Coming soon: you'll be able to create your own society as an admin.
+            Coming soon: Your Overview tab will be ready.
           </p>
         </div>
       </div>
