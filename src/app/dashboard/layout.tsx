@@ -1,6 +1,7 @@
 import AppSidebar from '@/components/layouts/dashboard/sidebar/appSidebar.layout'
 import { SidebarProvider } from '@/components/ui/sidebar'
 import DashboardOnboardingShell from '@/features/society/components/dashboard-onboarding-shell/dashboard-onboarding-shell'
+import BackendConnectionMonitor from '@/features/SystemMonitoring/faces/BackendConnectionMonitor'
 import { auth } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
 import React from 'react'
@@ -14,6 +15,8 @@ export default async function DashboardLayout({ children }: Readonly<{ children:
   }
 
   return (
+    <>
+    <BackendConnectionMonitor />
     <SidebarProvider>
       <div className='font-product flex min-h-screen w-full'>
         <AppSidebar />
@@ -25,5 +28,6 @@ export default async function DashboardLayout({ children }: Readonly<{ children:
         </main>
       </div>
     </SidebarProvider>
+    </>
   )
 }

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import { SidebarGroupConfig, SidebarHeaderConfig } from "../types/dashboardNavigation.type";
+import { DASHBOARD_ROUTES } from "../routes/dashboard/dashboard.routes";
 import { Logo } from "@/components/ui/customs/project-logo-provider";
 
 export const getDashboardSidebarHeaderConfig = (username: string): SidebarHeaderConfig => ({
@@ -24,25 +25,25 @@ export const dashboardSidebar_groupConfig: SidebarGroupConfig[] = [
     id: "overview",
     icon: LayoutDashboard,
     label: "Overview",
-    href: "/overview"
+    href: DASHBOARD_ROUTES.DASHBOARD.HOME
   },
   {
     id: "users",
     label: "Users",
     icon: UsersRound,
-    href: "/users",
+    href: DASHBOARD_ROUTES.USERS.LIST,
     items: [
       {
         id: "all",
         title: "All",
         icon: Rows2,
-        href: "/Users",
+        href: DASHBOARD_ROUTES.USERS.LIST,
       },
       {
         id: "invitation",
         title: "Invitation",
         icon: Rows2,
-        href: "/invitation",
+        href: DASHBOARD_ROUTES.USERS.INVITE,
       }
     ]
   },
@@ -50,24 +51,24 @@ export const dashboardSidebar_groupConfig: SidebarGroupConfig[] = [
     id: "apartments",
     label: "Apartments",
     icon: Building2,
-    href: "/apartments"
+    href: DASHBOARD_ROUTES.APARTMENTS.LIST
   },
   {
     id: "complaints",
     label: "Complaints",
     icon: FileWarning,
-    href: "/complaints"
+    href: DASHBOARD_ROUTES.COMPLAINTS.LIST
   },
   {
     id: "notices",
     icon: Megaphone,
     label: "Notices",
-    href: "/notices"
+    href: DASHBOARD_ROUTES.NOTICES.LIST
   },
   {
     id: "visitors",
     icon: IdCard,
     label: "Visitors",
-    href: "/visitors"
+    href: DASHBOARD_ROUTES.VISITORS.LIST
   },
 ]
