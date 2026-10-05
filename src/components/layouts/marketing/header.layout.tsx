@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import MarketingHeaderNavigation from '@/components/navigation/marketing/navigation/marketing.navigation'
+import MarketingHeaderNavigation from '@/components/navigation/marketing/navigationComponent/marketing.navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { MarketingAuthButtons } from "@/components/navigation/marketing/auth/authButtonProvider"
