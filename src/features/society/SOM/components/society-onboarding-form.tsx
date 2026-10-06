@@ -1,17 +1,18 @@
 "use client";
 
 import { useBootstrapSociety } from "../hooks/useBootstrapSociety";
-import { SocietyOnboardingInput } from "../types/society.types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { societyFormSchema } from "../schema/society.schema";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { Spinner } from "@/components/ui/spinner";
+import { SocietyOnboardingInput } from "../types/society.types";
 
 export function SocietyOnboardingForm() {
-  const { mutate, isPending, isError, isSuccess, } = useBootstrapSociety();
+  const { mutate, isPending, isError, isSuccess, error } = useBootstrapSociety();
 
+  console.log("error?.details?.code: ",error?.details?.code);
   const {
     register,
     handleSubmit,
@@ -142,7 +143,7 @@ export function SocietyOnboardingForm() {
           className="text-center 
           text-[clamp(0.75rem,2vw+0.5rem,0.875rem)] 
           leading-5 text-text-tertiary">
-          {isError ? "" : "You can complete the rest of your society settings after setup."}
+          {error?.details?.code == "USER_ALREADY_REGISTERED" ? "User is already registered" : "You can complete the rest of your society settings after setup."}
         </p>
       </div>
     </form>
