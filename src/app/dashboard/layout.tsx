@@ -1,6 +1,6 @@
 import AppSidebar from '@/components/layouts/dashboard/sidebar/appSidebar.layout'
 import { SidebarProvider } from '@/components/ui/sidebar'
-import DashboardOnboardingShell from '@/features/society/components/dashboard-onboarding-shell/dashboard-onboarding-shell'
+import DashboardOnboardingShell from '@/features/society/SOM/components/dashboard-onboarding-shell/dashboard-onboarding-shell'
 import BackendConnectionMonitor from '@/features/SystemMonitoring/faces/BackendConnectionMonitor'
 import { auth } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'

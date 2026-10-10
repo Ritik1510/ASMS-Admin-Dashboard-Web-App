@@ -1,7 +1,6 @@
 "use client"
 
 import { useCurrentUserQuery } from "@/features/users/hooks/use-current-user";
-import SocietyOnboardingModel from "../society-onboarding-model";
 import { Spinner } from "@/components/ui/spinner";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
